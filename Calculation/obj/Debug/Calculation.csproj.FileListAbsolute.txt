@@ -7,3 +7,12 @@ C:\Users\Admin\source\repos\Calculation\Calculation\obj\Debug\Calculation.Proper
 C:\Users\Admin\source\repos\Calculation\Calculation\obj\Debug\Calculation.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\Calculation\Calculation\obj\Debug\Calculation.exe
 C:\Users\Admin\source\repos\Calculation\Calculation\obj\Debug\Calculation.pdb
+C:\Diploma\Calculation\Calculation\bin\Debug\Calculation.exe.config
+C:\Diploma\Calculation\Calculation\bin\Debug\Calculation.exe
+C:\Diploma\Calculation\Calculation\bin\Debug\Calculation.pdb
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.csprojAssemblyReference.cache
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.Properties.Resources.resources
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.csproj.GenerateResource.cache
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.exe
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.pdb
+C:\Diploma\Calculation\Calculation\obj\Debug\Calculation.Calculator.resources

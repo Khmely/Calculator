@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Calculation
 {
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
         Control ActiveControl;
 
@@ -21,7 +21,7 @@ namespace Calculation
         double result = 0.0;
         string operation = string.Empty;
 
-        public Form1()
+        public Calculator()
         {
             InitializeComponent();
         }
@@ -68,33 +68,50 @@ namespace Calculation
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
-            //if
-            secondN = input;
-            double num1, num2;
-            double.TryParse(firstN, out num1);
-            double.TryParse(secondN, out num2);
-            switch (operation)
+            if (operation != "")
             {
-                case "*":
-                    result = num1 * num2;
-                    Display.Text = result.ToString();
-                    input = result.ToString();
-                    break;
-                case "/":
-                    result = num1 / num2;
-                    Display.Text = result.ToString();
-                    input = result.ToString();
-                    break;
-                case "+":
-                    result = num1 + num2;
-                    Display.Text = result.ToString();
-                    input = result.ToString();
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    Display.Text = result.ToString();
-                    input = result.ToString();
-                    break;
+                secondN = input;
+                double num1, num2;
+                double.TryParse(firstN, out num1);
+                double.TryParse(secondN, out num2);
+                switch (operation)
+                {
+                    case "*":
+                        result = num1 * num2;
+                        Display.Text = result.ToString();
+                        input = result.ToString();
+                        operation = string.Empty;
+                        break;
+                    case "/":
+                        if (num2 != 0)
+                        {
+                            result = num1 / num2;
+                            Display.Text = result.ToString();
+                            input = result.ToString();
+                            operation = string.Empty;
+                        }
+                        else
+                        {
+                            SecondDisplay.Text = "Error: division by zero";
+                        }
+                        break;
+                    case "+":
+                        result = num1 + num2;
+                        Display.Text = result.ToString();
+                        input = result.ToString();
+                        operation = string.Empty;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        Display.Text = result.ToString();
+                        input = result.ToString();
+                        operation = string.Empty;
+                        break;
+                }
+                operation = "";
+            }
+            else {
+                SecondDisplay.Text = "Error: no operation chosen";
             }
         }
     }

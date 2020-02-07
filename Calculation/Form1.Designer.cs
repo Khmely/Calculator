@@ -1,6 +1,6 @@
 ﻿namespace Calculation
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             this.buttonSin = new System.Windows.Forms.Button();
             this.buttonCos = new System.Windows.Forms.Button();
             this.buttonC = new System.Windows.Forms.Button();
+            this.SecondDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button7
@@ -218,7 +219,7 @@
             this.buttonDot.Name = "buttonDot";
             this.buttonDot.Size = new System.Drawing.Size(96, 89);
             this.buttonDot.TabIndex = 10;
-            this.buttonDot.Text = ".";
+            this.buttonDot.Text = ",";
             this.buttonDot.UseVisualStyleBackColor = false;
             this.buttonDot.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -442,12 +443,25 @@
             this.buttonC.UseVisualStyleBackColor = false;
             this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
             // 
-            // Form1
+            // SecondDisplay
+            // 
+            this.SecondDisplay.BackColor = System.Drawing.Color.Black;
+            this.SecondDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SecondDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SecondDisplay.ForeColor = System.Drawing.SystemColors.Window;
+            this.SecondDisplay.Location = new System.Drawing.Point(8, 3);
+            this.SecondDisplay.Multiline = true;
+            this.SecondDisplay.Name = "SecondDisplay";
+            this.SecondDisplay.Size = new System.Drawing.Size(512, 37);
+            this.SecondDisplay.TabIndex = 26;
+            // 
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(527, 553);
+            this.Controls.Add(this.SecondDisplay);
             this.Controls.Add(this.buttonC);
             this.Controls.Add(this.buttonCos);
             this.Controls.Add(this.buttonSin);
@@ -476,7 +490,8 @@
             this.Controls.Add(this.button7);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "Calculator";
             this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -511,6 +526,7 @@
         private System.Windows.Forms.Button buttonCos;
         private System.Windows.Forms.Button buttonC;
         private System.Windows.Forms.Button buttonDiv;
+        private System.Windows.Forms.TextBox SecondDisplay;
     }
 }
 
